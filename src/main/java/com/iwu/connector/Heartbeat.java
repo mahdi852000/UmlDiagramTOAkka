@@ -1,4 +1,4 @@
 package com.iwu.connector;
 
-public record Heartbeat() {
-}
+public record Heartbeat(String source) implements ConnectorCommand {}
+

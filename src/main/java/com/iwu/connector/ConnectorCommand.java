@@ -1,4 +1,4 @@
 package com.iwu.connector;
 
-public interface Connector {
+public interface ConnectorCommand {
 }
