@@ -14,6 +14,12 @@ public class Main {
                 ()-> system.tell(new InstructionCommand("Scan Barcode")),
                 system.executionContext()
         );
+        system.scheduler().scheduleOnce(
+                Duration.ofSeconds(10),
+                () -> system.tell(new InstructionCommand("SendHeartbeatManually")),
+                system.executionContext()
+        );
+
 
         try {Thread.sleep(30_000);}
         catch (InterruptedException ignored) {
